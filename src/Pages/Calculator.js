@@ -4,8 +4,8 @@ import { useSearchParams } from "react-router-dom";
 export const Calculator = () => {
   let param = useSearchParams();
   let data = param[0];
-  let num1 = data.get("num1");
-  let num2 = data.get("num2");
+  let num1 = parseInt(data.get("num1"), 10);
+  let num2 = parseInt(data.get("num2"), 10);
   let op = unescape(data.get("op"));
   let res;
   switch (op) {
